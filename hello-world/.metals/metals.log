@@ -1,0 +1,151 @@
+2024.12.15 17:35:20 INFO  Started: Metals version 1.4.1 in folders 'D:\DATA SCIENCE\GIT\scala\hello-world' for client Visual Studio Code 1.96.0.
+2024.12.15 17:35:21 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:35:24 INFO  running 'C:\Users\lyduc\AppData\Local\Coursier\cache\arc\https\github.com\AdoptOpenJDK\openjdk11-binaries\releases\download\jdk-11.0.11%252B9\OpenJDK11U-jdk_x64_windows_hotspot_11.0.11_9.zip\jdk-11.0.11+9\bin\java.exe -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\lyduc\AppData\Local\Temp\metals17919720916396165654\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.12.15 17:35:25 INFO  [info] welcome to sbt 1.10.6 (AdoptOpenJDK Java 11.0.11)
+2024.12.15 17:35:25 INFO  [info] loading global plugins from C:\Users\lyduc\.sbt\1.0\plugins
+2024.12.15 17:35:28 INFO  [info] loading settings for project hello-world-build-build from metals.sbt...
+2024.12.15 17:35:28 INFO  [info] loading project definition from D:\DATA SCIENCE\GIT\scala\hello-world\project\project
+2024.12.15 17:35:29 INFO  [info] loading settings for project hello-world-build from metals.sbt...
+2024.12.15 17:35:29 INFO  [info] loading project definition from D:\DATA SCIENCE\GIT\scala\hello-world\project
+2024.12.15 17:35:31 INFO  [success] Generated .bloop\hello-world-build.json
+2024.12.15 17:35:31 INFO  [success] Total time: 2 s, completed Dec 15, 2024, 5:35:31 PM
+2024.12.15 17:35:31 INFO  [info] loading settings for project hello-world from build.sbt...
+2024.12.15 17:35:31 INFO  [info] set current project to hello-world (in build file:/D:/DATA%20SCIENCE/GIT/scala/hello-world/)
+2024.12.15 17:35:32 INFO  [success] Generated .bloop\hello-world-test.json
+2024.12.15 17:35:32 INFO  [success] Generated .bloop\hello-world.json
+2024.12.15 17:35:32 INFO  [success] Total time: 0 s, completed Dec 15, 2024, 5:35:32 PM
+2024.12.15 17:35:32 INFO  time: ran 'sbt bloopInstall' in 8.45s
+2024.12.15 17:35:32 INFO  Attempting to connect to the build server...
+2024.12.15 17:35:32 INFO  Found a Bloop server running
+2024.12.15 17:35:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:35:33 INFO  Attempting to connect to the build server...
+2024.12.15 17:35:33 INFO  Found a Bloop server running
+2024.12.15 17:35:33 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\project\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:35:33 INFO  time: Connected to build server in 1.14s
+2024.12.15 17:35:33 INFO  Connected to Build server: Bloop v2.0.5
+2024.12.15 17:35:33 INFO  running doctor check
+2024.12.15 17:35:33 INFO  java targets: hello-world-build, hello-world, hello-world-test
+2024.12.15 17:35:40 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:36:00 INFO  time: indexed workspace in 26s
+2024.12.15 17:36:07 INFO  compiling hello-world (1 scala source)
+2024.12.15 17:36:09 INFO  time: compiled hello-world in 2.02s
+2024.12.15 17:38:49 INFO  Shutting down server
+2024.12.15 17:38:49 INFO  shutting down Metals
+2024.12.15 17:38:49 INFO  Shut down connection with build server.
+2024.12.15 17:38:49 INFO  Shut down connection with build server.
+2024.12.15 17:38:49 INFO  Exiting server
+2024.12.15 17:44:34 INFO  Started: Metals version 1.4.1 in folders 'D:\DATA SCIENCE\GIT\scala\hello-world' for client Visual Studio Code 1.96.0.
+2024.12.15 17:44:35 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:44:35 INFO  Attempting to connect to the build server...
+2024.12.15 17:44:35 INFO  Found a Bloop server running
+2024.12.15 17:44:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:44:36 INFO  Attempting to connect to the build server...
+2024.12.15 17:44:36 INFO  Found a Bloop server running
+2024.12.15 17:44:36 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\project\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:44:36 INFO  time: Connected to build server in 1.36s
+2024.12.15 17:44:36 INFO  Connected to Build server: Bloop v2.0.5
+2024.12.15 17:44:36 INFO  time: Imported build in 0.12s
+2024.12.15 17:44:36 INFO  running doctor check
+2024.12.15 17:44:36 INFO  java targets: hello-world-build, hello-world, hello-world-test
+2024.12.15 17:44:43 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:44:45 INFO  time: indexed workspace in 8.46s
+2024.12.15 17:44:55 INFO  Shutting down server
+2024.12.15 17:44:55 INFO  shutting down Metals
+2024.12.15 17:44:55 INFO  Shut down connection with build server.
+2024.12.15 17:44:55 INFO  Shut down connection with build server.
+2024.12.15 17:44:55 INFO  Exiting server
+2024.12.15 17:45:23 INFO  Started: Metals version 1.4.1 in folders 'D:\DATA SCIENCE\GIT\scala\hello-world' for client Visual Studio Code 1.96.0.
+2024.12.15 17:45:24 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:45:24 INFO  Attempting to connect to the build server...
+2024.12.15 17:45:24 INFO  Found a Bloop server running
+2024.12.15 17:45:24 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:45:24 INFO  Attempting to connect to the build server...
+2024.12.15 17:45:24 INFO  Found a Bloop server running
+2024.12.15 17:45:25 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\project\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 17:45:24 INFO  time: Connected to build server in 1.3s
+2024.12.15 17:45:24 INFO  Connected to Build server: Bloop v2.0.5
+2024.12.15 17:45:24 INFO  running doctor check
+2024.12.15 17:45:24 INFO  java targets: hello-world-build, hello-world, hello-world-test
+2024.12.15 17:45:32 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 17:45:33 INFO  time: indexed workspace in 7.98s
+2024.12.15 17:45:51 INFO  Shutting down server
+2024.12.15 17:45:51 INFO  shutting down Metals
+2024.12.15 17:45:51 INFO  Shut down connection with build server.
+2024.12.15 17:45:51 INFO  Shut down connection with build server.
+2024.12.15 17:45:51 INFO  Exiting server
+2024.12.15 18:10:00 INFO  Started: Metals version 1.4.1 in folders 'D:\DATA SCIENCE\GIT\scala\hello-world' for client Visual Studio Code 1.96.0.
+2024.12.15 18:10:01 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 18:10:01 INFO  Attempting to connect to the build server...
+2024.12.15 18:10:01 INFO  Found a Bloop server running
+2024.12.15 18:10:02 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 18:10:02 INFO  Attempting to connect to the build server...
+2024.12.15 18:10:02 INFO  Found a Bloop server running
+2024.12.15 18:10:03 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at D:\DATA SCIENCE\GIT\scala\hello-world\project\.metals\bsp.trace.json or C:\Users\lyduc\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2024.12.15 18:10:03 INFO  time: Connected to build server in 1.88s
+2024.12.15 18:10:03 INFO  Connected to Build server: Bloop v2.0.5
+2024.12.15 18:10:03 INFO  time: Imported build in 0.17s
+2024.12.15 18:10:03 INFO  running doctor check
+2024.12.15 18:10:03 INFO  java targets: hello-world-build, hello-world, hello-world-test
+2024.12.15 18:10:06 WARN  Flyway upgrade recommended: H2 2.3.232 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.224.
+2024.12.15 18:10:08 INFO  time: indexed workspace in 4.33s
+2024.12.15 18:11:09 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:11:11 INFO  time: compiled hello-world in 2.13s
+2024.12.15 18:11:21 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:11:21 INFO  time: compiled hello-world in 0.61s
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.pom
+Downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.pom
+Downloaded https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.pom
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.pom
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.3.1/sourcecode_2.13-0.3.1.pom
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.3.1/sourcecode_2.13-0.3.1.pom
+Downloading https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/com/typesafe/config/1.4.1/config-1.4.1.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.15/scalafmt-sysops_2.13-3.7.15.jar
+Downloading https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.3.1/sourcecode_2.13-0.3.1.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.12/scalameta_2.13-4.8.12.jar
+Downloading https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.12/parsers_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/com/lihaoyi/sourcecode_2.13/0.3.1/sourcecode_2.13-0.3.1.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.15/scalafmt-config_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.15/scalafmt-core_2.13-3.7.15.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.12/trees_2.13-4.8.12.jar
+Downloaded https://repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.12/common_2.13-4.8.12.jar
+2024.12.15 18:11:35 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:11:35 INFO  time: compiled hello-world in 0.49s
+2024.12.15 18:11:37 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:11:37 INFO  time: compiled hello-world in 0.42s
+2024.12.15 18:11:48 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:11:48 INFO  time: compiled hello-world in 0.39s
+2024.12.15 18:12:21 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:12:21 INFO  time: compiled hello-world in 0.36s
+2024.12.15 18:12:22 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:12:22 INFO  time: compiled hello-world in 0.15s
+2024.12.15 18:15:42 INFO  compiling hello-world (1 scala source)
+2024.12.15 18:15:43 INFO  time: compiled hello-world in 1.02s
+2024.12.15 18:18:43 INFO  Shutting down server
+2024.12.15 18:18:43 INFO  shutting down Metals
+2024.12.15 18:18:43 INFO  Shut down connection with build server.
+2024.12.15 18:18:43 INFO  Shut down connection with build server.
+2024.12.15 18:18:43 INFO  Exiting server
