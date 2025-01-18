@@ -5,6 +5,12 @@ object Main extends App {
     def union(s: IntSet): IntSet
   }
 
+  object IntSet {
+    def apply(): IntSet = Empty
+    def apply(x: Int): IntSet = Empty.incl(x)
+    def apply(x: Int, y: Int): IntSet = Empty.incl(x).incl(y)
+  }
+
   class NonEmpty(elem: Int, left: IntSet, right: IntSet) extends IntSet {
     def contains(x: Int): Boolean =
       if (x < elem) left.contains(x)
