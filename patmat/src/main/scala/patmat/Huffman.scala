@@ -81,11 +81,14 @@ trait Huffman extends HuffmanInterface:
     * the list should have the smallest weight), where the weight of a leaf is
     * the frequency of the character.
     */
-  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] = ???
+  def makeOrderedLeafList(freqs: List[(Char, Int)]): List[Leaf] =
+    freqs.sortBy(_._2).map((char, weight) => Leaf(char, weight))
 
   /** Checks whether the list `trees` contains only one single code tree.
     */
-  def singleton(trees: List[CodeTree]): Boolean = ???
+  def singleton(trees: List[CodeTree]): Boolean = trees match
+    case _ :: Nil => true
+    case _        => false
 
   /** The parameter `trees` of this function is a list of code trees ordered by
     * ascending weights.
@@ -98,7 +101,16 @@ trait Huffman extends HuffmanInterface:
     * If `trees` is a list of less than two elements, that list should be
     * returned unchanged.
     */
-  def combine(trees: List[CodeTree]): List[CodeTree] = ???
+  def combine(trees: List[CodeTree]): List[CodeTree] = trees match
+    case Nil | _ :: Nil => trees
+    case first :: second :: rest =>
+      val newFork = Fork(
+        first,
+        second,
+        chars(first) ::: chars(second),
+        weight(first) + weight(second)
+      )
+      (newFork :: rest).sortBy(weight)
 
   /** This function will be called in the following way:
     *
@@ -114,7 +126,9 @@ trait Huffman extends HuffmanInterface:
   def until(
       done: List[CodeTree] => Boolean,
       merge: List[CodeTree] => List[CodeTree]
-  )(trees: List[CodeTree]): List[CodeTree] = ???
+  )(trees: List[CodeTree]): List[CodeTree] =
+    if (done(trees)) trees
+    else until(done, merge)(merge(trees))
 
   /** This function creates a code tree which is optimal to encode the text
     * `chars`.
@@ -123,7 +137,10 @@ trait Huffman extends HuffmanInterface:
     * character frequencies from that text and creates a code tree based on
     * them.
     */
-  def createCodeTree(chars: List[Char]): CodeTree = ???
+  def createCodeTree(chars: List[Char]): CodeTree =
+    if (chars.isEmpty)
+      throw new IllegalArgumentException("Character list cannot be empty")
+    else until(singleton, combine)(makeOrderedLeafList(times(chars))).head
 
   // Part 3: Decoding
 
@@ -132,7 +149,22 @@ trait Huffman extends HuffmanInterface:
   /** This function decodes the bit sequence `bits` using the code tree `tree`
     * and returns the resulting list of characters.
     */
-  def decode(tree: CodeTree, bits: List[Bit]): List[Char] = ???
+  def decode(tree: CodeTree, bits: List[Bit]): List[Char] =
+    def decodeAcc(subTree: CodeTree, remainingBits: List[Bit]): List[Char] =
+      (subTree, remainingBits) match
+        case (Leaf(char, _), rest) =>
+          char :: decodeAcc(
+            tree,
+            rest
+          ) // Restart from the root after finding a character
+        case (Fork(left, _, _, _), 0 :: tail) =>
+          decodeAcc(left, tail)
+        case (Fork(_, right, _, _), 1 :: tail) =>
+          decodeAcc(right, tail)
+        case (_, Nil) =>
+          Nil // If no bits are left, return empty list
+
+    decodeAcc(tree, bits) // Start decoding
 
   /** A Huffman coding tree for the French language. Generated from the data
     * given at
@@ -241,14 +273,25 @@ trait Huffman extends HuffmanInterface:
 
   /** Write a function that returns the decoded secret
     */
-  def decodedSecret: List[Char] = ???
+  def decodedSecret: List[Char] = decode(frenchCode, secret)
 
   // Part 4a: Encoding using Huffman tree
 
   /** This function encodes `text` using the code tree `tree` into a sequence of
     * bits.
     */
-  def encode(tree: CodeTree)(text: List[Char]): List[Bit] = ???
+  def encode(tree: CodeTree)(text: List[Char]): List[Bit] =
+    def encodeAcc(tree: CodeTree, char: Char): List[Bit] = tree match
+      case Leaf(c, _) if c == char => List()
+      case Fork(left, right, _, _) =>
+        if (chars(left).contains(char)) 0 :: encodeAcc(left, char)
+        else if (chars(right).contains(char)) 1 :: encodeAcc(right, char)
+        else
+          throw new IllegalArgumentException(
+            s"Character $char not found in tree."
+          )
+
+    text.flatMap(encodeAcc(tree, _))
 
   // Part 4b: Encoding using code table
 
