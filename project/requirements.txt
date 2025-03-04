@@ -1,0 +1,4 @@
+numpy
+setuptools
+spark-nlp==5.5.3
+pyspark==3.3.1
