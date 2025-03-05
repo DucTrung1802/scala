@@ -29,7 +29,7 @@ resolvers += "John Snow Labs Repo" at "https://johnsnowlabs.jfrog.io/artifactory
 libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % "3.3.0",
   "org.apache.spark" %% "spark-mllib" % "3.3.0",
-  "com.johnsnowlabs.nlp" %% "spark-nlp" % "5.1.3"
+  "com.johnsnowlabs.nlp" %% "spark-nlp" % "5.4.2"
 )
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,

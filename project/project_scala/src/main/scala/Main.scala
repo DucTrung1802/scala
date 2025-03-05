@@ -17,14 +17,25 @@ object App {
       .setInputCol("text")
       .setOutputCol("document")
 
-    val t5 = T5Transformer
-      .pretrained("t5_large_arxiv_abstract_title", "en")
-      .setInputCols(Array("documents"))
-      .setOutputCol("output")
-
-    val pipeline = new Pipeline().setStages(Array(documentAssembler, t5))
     val data = Seq("I love spark-nlp").toDS.toDF("text")
-    val pipelineModel = pipeline.fit(data)
-    val pipelineDF = pipelineModel.transform(data)
+
+    // Process the document separately
+    val docDF = new Pipeline()
+      .setStages(Array(documentAssembler))
+      .fit(data)
+      .transform(data)
+
+    // Load the T5 model separately
+    val t5Model = T5Transformer
+      .load("../t5_large_arxiv_abstract_title_en_5.4.2_3.0")
+      .setInputCols(Array("document"))
+      .setOutputCol("output")
+      .setLazyAnnotator(true) // Prevent Spark from serializing
+      .setBatchSize(16)
+
+    // Apply the model transformation outside of the pipeline
+    val transformedDF = t5Model.transform(docDF)
+
+    transformedDF.show(false)
   }
 }
