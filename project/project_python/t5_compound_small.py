@@ -30,7 +30,7 @@ data = (
     .option("multiLine", True)
     .option("quote", '"')
     .option("escape", '"')
-    .csv("ML-Arxiv-Papers-edit.csv")
+    .csv("ML-Arxiv-Papers-edit-small.csv")
 )
 
 # Format data for T5
