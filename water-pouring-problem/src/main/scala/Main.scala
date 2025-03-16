@@ -30,10 +30,40 @@ object Main extends App {
         )).toList
 
     case class Path(history: List[Move], endState: State) {
+      // endState is the newsest state of current Path
       def extend(move: Move): Path =
         Path(move :: history, Move.apply(move, endState))
       override def toString(): String =
         s"${history.reverse.mkString(" ")} --> $endState"
     }
+
+    val empty: State = full.map(x => 0)
+    val start = Path(Nil, empty)
+
+    def pathsFrom(
+        paths: List[Path],
+        explored: Set[State]
+    ): LazyList[List[Path]] = {
+      val frontier = {
+        for (
+          path <- paths; move <- moves; next = path.extend(move)
+          if !explored.contains(next.endState)
+        )
+          yield next
+      }
+      paths #:: pathsFrom(frontier, explored ++ frontier.map(_.endState))
+    }
+
+    def solutions(target: Int): LazyList[Path] = {
+      for (
+        paths <- pathsFrom(List(start), Set(empty));
+        path <- paths
+        if path.endState.contains(target)
+      )
+        yield path
+    }
   }
+
+  val problem = new Pouring(Vector(4, 7))
+  println(problem.solutions(6).head)
 }
