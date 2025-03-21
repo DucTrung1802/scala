@@ -1,10 +1,14 @@
 import scala.annotation.tailrec
 
 object Main extends App {
-  @tailrec
-  def factorial(n: Int, result: BigInt = 1): BigInt =
-    if (n == 0) result
-    else factorial(n - 1, n * result);
+  
+  def factorial(n: Int): Int = {
+    @tailrec
+    def factorialAcc(current: Int, acc: Int): Int = {
+      if (current == 1) acc else factorialAcc(current - 1, acc * current)
+    }
+    factorialAcc(n, 1)
+  }
 
-  println(factorial(50))
+  println(factorial(5))
 }
